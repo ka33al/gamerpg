@@ -2,8 +2,15 @@
 // Você pode escrever seu código neste editor
 
 
+//criando timer para mudar de estado
 
+tempo_estado = game_get_speed(gamespeed_fps)*15
+timer_estado = tempo_estado
 
+rota_x = 0
+rota_y = 0
+
+vel = 3
 
 
 
@@ -12,17 +19,27 @@ event_inherited();
 // e sobre escrito
 
 
-
+estado_hunt = new estado()
 #region estado idle
 estado_slime_idle.inicia=function()
 {
 	sprite_index = Slime_idle
 	image_index = 0
-	show_debug_message("estado_slime_idle.inicia");
+
+timer_estado= tempo_estado
+	
 	
 }
 estado_slime_idle.roda= function ()
 {
+	timer_estado--
+	
+	var _tempo = irandom(timer_estado)
+	if (_tempo <=4 )
+	{
+		var _state = choose(estado_slime_idle,estado_slime_walk,estado_slime_walk)
+		troca_estado(_state)
+	}
 	
 }
 
@@ -32,12 +49,27 @@ estado_slime_idle.roda= function ()
 	{
 		sprite_index = Slime_walk
 		image_index = 0 
+		timer_estado = tempo_estado
+	
+	rota_x = irandom(room_width)
+	rota_y = irandom(room_height)
 	}
 	
 	estado_slime_walk.roda = function()
 	{
-	
-	}
+		var _tempo = irandom(timer_estado)
+		timer_estado --
+		if(_tempo <=5)
+		{
+			var _new_state = choose(estado_slime_idle,estado_slime_walk)
+			troca_estado(_new_state)}
+		
+		mp_potential_step_object(rota_x,rota_y,1 ,obj_colisor)
+		
+		
+		}	
+			
+			
 #endregion
 #region hurt
 	estado_slime_hurt.inicia= function()
@@ -55,7 +87,7 @@ estado_slime_idle.roda= function ()
 				{
 					if(life > 0)
 							{
-								troca_estado(estado_slime_idle)
+								troca_estado(estado_hunt)
 							}
 						else
 							{
@@ -94,6 +126,32 @@ estado_slime_idle.roda= function ()
 	}
 	
 	
+#endregion
+#region hunt 
+
+estado_hunt.inicia = function ()
+{
+	sprite_index = Slime_walk
+	image_index	 = 0 
+	
+	image_blend  = c_yellow
+	if ( instance_exists(objs_player))
+	{
+		alvo = objs_player.id
+	}
+}
+estado_hunt.roda=function()
+
+{
+	if(!instance_exists(objs_player)){
+		alvo = noone
+		troca_estado(estado_slime_idle)
+	}
+	mp_potential_step_object(alvo.x,alvo.y,1,obj_colisor)
+	
+}
+
+
 #endregion
 
 

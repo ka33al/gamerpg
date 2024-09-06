@@ -3,10 +3,14 @@
   "%Name":"obj_goblin",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":8,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_goblin",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Obj_enemis_father","path":"objects/Obj_enemis_father/Obj_enemis_father.yy",},"propertyId":{"name":"life","path":"objects/Obj_enemis_father/Obj_enemis_father.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"7",},
+  ],
   "parent":{
     "name":"enemi",
     "path":"folders/Objetos/caracters/enemi.yy",
@@ -33,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"goblin_idle_front",
-    "path":"sprites/goblin_idle_front/goblin_idle_front.yy",
+    "name":"goblin_idle",
+    "path":"sprites/goblin_idle/goblin_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
