@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"enemis",
-    "path":"folders/Sprites/enemis.yy",
+    "name":"slimes",
+    "path":"folders/Sprites/enemis/slimes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

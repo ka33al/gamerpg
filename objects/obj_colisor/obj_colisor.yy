@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Object2",
+  "%Name":"obj_colisor",
   "eventList":[],
   "managed":true,
-  "name":"Object2",
+  "name":"obj_colisor",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",

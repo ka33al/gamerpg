@@ -33,8 +33,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"trees",
-    "path":"folders/Sprites/decoration/objects/trees.yy",
+    "name":"objects",
+    "path":"folders/Sprites/decoration/objects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

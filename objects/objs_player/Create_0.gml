@@ -19,7 +19,7 @@ estado_idle.inicia = function()
 	sprite_index = _sprite	;
 	
 	image_index = 0;
-	show_debug_message("idle.inicia: {0}", sprite_index);
+	
 }
 
 estado_idle.roda = function()
