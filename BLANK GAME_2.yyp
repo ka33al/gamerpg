@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":0,
+  "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Anotações","folderPath":"folders/Anotações.yy","name":"Anotações","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Caminhos","folderPath":"folders/Caminhos.yy","name":"Caminhos","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -52,6 +52,8 @@
     {"id":{"name":"Decoration_father","path":"objects/Decoration_father/Decoration_father.yy",},},
     {"id":{"name":"obj_colisor","path":"objects/obj_colisor/obj_colisor.yy",},},
     {"id":{"name":"Obj_enemi_slime","path":"objects/Obj_enemi_slime/Obj_enemi_slime.yy",},},
+    {"id":{"name":"Obj_enemis_father","path":"objects/Obj_enemis_father/Obj_enemis_father.yy",},},
+    {"id":{"name":"obj_goblin","path":"objects/obj_goblin/obj_goblin.yy",},},
     {"id":{"name":"obj_tree","path":"objects/obj_tree/obj_tree.yy",},},
     {"id":{"name":"objs_player","path":"objects/objs_player/objs_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

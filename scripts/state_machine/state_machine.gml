@@ -15,22 +15,22 @@ function estado()constructor
 function inicia_estado (_estado)
 
 {
-	estad_atual = _estado
+	estado_atual = _estado
 	
-	estad_atual.inicia()
+	estado_atual.inicia()
 }
 
 
 function roda_estado()
 {
-	estad_atual.roda()	
+	estado_atual.roda()	
 }
 function troca_estado(_estado)
 {
-	estad_atual.finaliza()
+	estado_atual.finaliza()
 	
-	estad_atual=_estado
-	estad_atual.inicia()
+	estado_atual=_estado
+	estado_atual.inicia()
 }
 
 
