@@ -5,6 +5,11 @@ timer_estado = tempo_estado
 
 rota_x = 0
 rota_y = 0
+max_x = 220
+max_y = 160
+offset_x = 0
+offset_y = 560
+
  event_inherited()
  estado_hunt = new estado()
 #region estado idle
@@ -12,8 +17,7 @@ estado_slime_idle.inicia=function()
 {
 	sprite_index = goblin_idle
 	image_index = 0
-	show_debug_message("estado_slime_idle.inicia");
-		timer_estado= tempo_estado
+	timer_estado= tempo_estado
 }
 estado_slime_idle.roda= function ()
 {
@@ -39,8 +43,9 @@ estado_slime_idle.roda= function ()
 		image_index = 0 
 				timer_estado = tempo_estado
 	
-	rota_x = irandom(room_width)
-	rota_y = irandom(room_height)
+	rota_x = irandom(max_x) + offset_x
+	rota_y = irandom(max_y) + offset_y
+
 	}
 	
 	estado_slime_walk.roda = function()
@@ -51,9 +56,7 @@ estado_slime_idle.roda= function ()
 		{
 			var _new_state = choose(estado_slime_idle,estado_slime_walk)
 			troca_estado(_new_state)}
-		
-		mp_potential_step_object(rota_x,rota_y,1 ,obj_colisor)
-		
+		    mp_potential_step_object(rota_x, rota_y, 1, obj_colisor)
 	
 	}
 #endregion
