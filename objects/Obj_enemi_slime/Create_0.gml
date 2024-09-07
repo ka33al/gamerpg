@@ -10,7 +10,7 @@ timer_estado = tempo_estado
 rota_x = 0
 rota_y = 0
 
-vel = 3
+
 
 
 
